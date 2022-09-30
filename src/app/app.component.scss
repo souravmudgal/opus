@@ -1,0 +1,130 @@
+// second card design
+
+// .card {
+//     cursor: pointer;
+//     width: 40px;
+//     height: 300px;
+//     border-radius: 15px;
+// }
+// .front,
+// .back {
+//     width: 240px;
+//     height: 300px;
+//     overflow: hidden;
+//     backface-visibility: hidden;
+//     position: absolute;
+//     transition: transform 0.5s linear;
+//     border-radius: 10px;
+// }
+// .card:hover > .front {
+//     transform: perspective(600px) rotateY(-180deg);
+// }
+// .card:hover > .back {
+//     transform: perspective(600px) rotateY(0deg);
+// }
+// .back {
+//     background-image: linear-gradient(#000000, #2d3436);
+//     transform: rotateY(180deg);
+// }
+// .front {
+//     background-image: linear-gradient(#000000, #2d3436);
+// }
+// .card_color {
+//     background-image: linear-gradient(#000000, #2d3436);
+// }
+
+// .carousel-wrap {
+//     margin: 10px auto;
+//     padding: 0 5%;
+//     width: 100%;
+//     position: relative;
+// }
+// .name-container {
+//     bottom: 0;
+// }
+// .back_color {
+//     background-image: linear-gradient(#000000, #2d3436);
+// }
+
+// section {
+//     background-image: linear-gradient(to right, #434343 0%, black 100%);
+// }
+
+.container {
+    width: 900px;
+    margin: 0px auto;
+}
+/* Float three columns side by side */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+    }
+
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card .profile {
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.card:hover .profile {
+    transform: scale(1.4);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.card .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.card .content .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1e6;
+    transition: 1s;
+    z-index: 1;
+    padding: 10px;
+}
+
+.from-bottom {
+    top: 100%;
+    left: 0;
+}
+.card:hover .content .from-bottom {
+    top: 0%;
+}
